@@ -2,13 +2,10 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './Submit-Itinerary.css';
-import StarRating from '../StarRating/StarRating';
 import FilterTile from '../filter-tile/FilterTile';
-import InputBox from '../input-box/InputBox';
 
 const SubmitItinerary = () => {
   const [noOfDays, selectNonOfDays] = useState([])
-  const [formSubmit, setFormSubmit] = useState(false)
   const [itineraryDetails, setItineraryDetails] = useState([]); // State to store details of each day
 
   const navigate = useNavigate();
@@ -74,7 +71,6 @@ const SubmitItinerary = () => {
   };
 
   const onSubmit = async () => {
-    setFormSubmit(true);
 
     const itineraryData = prepareItineraryData();
 

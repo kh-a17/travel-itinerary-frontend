@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './ViewPage.css';
 import Navbar from '../Navbar';
 import { useLocation } from 'react-router-dom';
@@ -8,7 +8,6 @@ const ViewPage = () => {
   const results = location.state?.results || [];
   const filters = location.state?.filters || {};
 
-  console.log(results)
   return (
     <div className="view-page">
       <Navbar />
