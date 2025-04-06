@@ -1,0 +1,231 @@
+/* Main Page Container */
+/* Background of the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Full-page animated background with image */
+.background {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay to make text readable */
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* optional dark tint */
+  z-index: 0;
+}
+
+/* Planes flying across the background */
+.background::before {
+  content: "✈";
+  position: absolute;
+  top: 40%;
+  left: -50px;
+  font-size: 7rem;
+  color: #fbfbfbde;
+  animation: fly 12s linear infinite;
+  z-index: 0;
+}
+
+/* Main form container */
+.container {
+  z-index: 2;
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent white */
+  border-radius: 12px;
+  padding: 30px;
+  color: #a6cdc4;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px); /* glassmorphism style */
+}
+
+/* Title and subtitle */
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: #a6cdc4;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #282333; /* Change this to your desired color */
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Search input */
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Filter fields */
+.filters label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #a6cdc4;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Flying animation path */
+@keyframes fly {
+  0% {
+    transform: translate(-10vw, -10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    transform: translate(20vw, 10vh) rotate(15deg);
+  }
+  50% {
+    transform: translate(40vw, -5vh) rotate(-10deg);
+  }
+  75% {
+    transform: translate(70vw, 15vh) rotate(20deg);
+  }
+  100% {
+    transform: translate(110vw, -10vh) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.search-and-filter-container {
+  padding-top: 100px; /* Makes space below fixed navbar */
+  padding-bottom: 60px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+/* Ensure body scrolls */
+body, html, #root {
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* space for icon */
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 35%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #a6cdc4;
+}
+
+.filters select {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.95rem;
+}
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-button{
+  width: 300px;
+  height: 60px;
+  background-color: #282333;
+  border: 2px solid #a6cdc4;
+  color: #a6cdc4;
+  font-size: 16px;
+  border-radius: 16px;
+  margin: 40px 0 60px 0;
+  &:hover{
+      cursor: pointer;
+      background-color: #a6cdc4;
+      color: #282333;
+      font-weight: 600;
+      border: 2px solid #282333;
+  }
+}

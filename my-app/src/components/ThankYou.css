@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+.thank-you-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw; /* use vw for full viewport width */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .thankyou-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    z-index: -1;
+  }
+  
+  .thank-you-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+  }
+.thank-you-container h1 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.thank-you-container p {
+  font-size: 0.95rem;
+  margin: 8px 0;
+  color: #a6cdc4;
+}
+
+  

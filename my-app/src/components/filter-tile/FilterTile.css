@@ -1,0 +1,24 @@
+.filter-tile-wrapper{
+    height: 220px;
+    width: 180px;
+    border: 4px solid #a6cdc4;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background-color: #282333;
+    color: #a6cdc4;
+    &:hover{
+        cursor: pointer;
+        background-color: #a6cdc4;
+        color: #282333;
+        font-weight: 600;
+        border: 4px solid #282333;
+    }
+}
+
+.square-tile{
+    height: 150px;
+    width: 150px;
+}

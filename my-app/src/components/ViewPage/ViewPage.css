@@ -1,0 +1,96 @@
+/* Full Page Styling */
+.view-page {
+    padding: 20px;
+    margin-top: 80px; /* ensures space below navbar */
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+    color: white;
+  }
+  
+  
+.user-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .user-card {
+    background-color: #3c3742;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  /* Fixing the filter bar text */
+  .filter-bar-horizontal {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .filter-bar span {
+    margin: 8px 12px;
+    white-space: nowrap;
+  }
+  
+  /* Each user's full itinerary card */
+  .user-itinerary-card {
+    background-color: #3e394c;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease;
+  }
+  
+  .user-itinerary-card:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Username Header */
+  .user-itinerary-card h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  
+  /* Day-wise section inside each user card */
+  .day-block {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+  
+  .day-block h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .day-block p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+  }
+  
+  .day-block strong {
+    color: #a6cdc4;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .filter-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .filter-bar span {
+      margin: 6px 0;
+    }
+  }
+  
