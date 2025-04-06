@@ -30,7 +30,7 @@ function SearchAndFilter() {
     };
 
     try {
-      const response = await axios.get('http://localhost:5000/api/posts/get-post-info', {
+      const response = await axios.get('https://travel-itinerary-backend-lxhm.onrender.com/api/posts/get-post-info', {
         params: query,
       });
       navigate('/view-post', { state: { results: response.data, filters: query } });

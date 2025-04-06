@@ -17,7 +17,7 @@ const LoginRegister = () => {
 
   const handleAuth = async (formData) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/${isLogin ? 'login' : 'signup'}`, {
+      const response = await fetch(`https://travel-itinerary-backend-lxhm.onrender.com/api/auth/${isLogin ? 'login' : 'signup'}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

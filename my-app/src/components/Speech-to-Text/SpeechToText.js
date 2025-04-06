@@ -111,7 +111,7 @@ const VoiceInput = () => {
 
     try {
       // Send the data to the backend via a POST request
-      const response = await fetch('http://localhost:5000/api/posts/create-post', {
+      const response = await fetch('https://travel-itinerary-backend-lxhm.onrender.com/api/posts/create-post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
